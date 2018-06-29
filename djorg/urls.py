@@ -21,6 +21,7 @@ from notes.api import NoteViewset
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewset)
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'api/', include(router.urls)),

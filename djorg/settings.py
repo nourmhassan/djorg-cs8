@@ -35,6 +35,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 INSTALLED_APPS = [
     'notes',
+    'graphene_django',
+    'graphene',
     'rest_framework',
     'rest_framework.authtoken',
     'django.contrib.admin',
@@ -148,3 +150,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
 } 
+
+
+GRAPHENE = {
+    'SCHEMA': 'notes.schema.schema'
+
+}
